@@ -1,0 +1,16 @@
+nav[id="toc"] {
+  top: 42px;
+}
+
+/* small screens */
+@media (max-width: 768px) {
+  /* override stickyness so that the navigation does not follow scrolling */
+  nav[id="toc"] {
+    margin-bottom: 42px;
+    position: static;
+  }
+
+  nav[id="toc"] .nav .active .nav {
+    display: none;
+  }
+}

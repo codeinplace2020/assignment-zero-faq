@@ -1,1 +1,159 @@
-Hello, World!   
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <title>Assignment 0 FAQ</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css"
+    />
+    <link rel="stylesheet" href="faqstyles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row" style="height: 15px;"></div>
+      <div class="row">
+        <div class="col-sm-3">
+          <nav id="toc" class="sticky-top"></nav>
+        </div>
+        <div class="col-sm-9">
+          <h1>Assignment #0 FAQs</h1>
+          <hr />
+          <p>
+            <i>
+              Is your code not working? That is very normal, especially when you
+              are first starting. Keep at it! And you can work through any of
+              the challenges you face on this “assignment”.
+            </i>
+          </p>
+
+          <h2>Understanding Typos</h2>
+          <p>
+            Reading error messages for typos is a skill that is worth learning
+            but takes some practice. Here is a translation of some of the common
+            ones and what they could mean.
+          </p>
+
+          <h3><code>Expected a body definition</code></h3>
+          <p>
+            All functions (like <code>main</code>) need to have a body, which is
+            the indented code. See Chapter 3 of the Karel Reader. For example,
+            in this <code>turn_right</code> function definition, the
+            <code>turn_left</code> commands are all in the body:
+          </p>
+
+          <pre>
+                    def turn_right():
+                    turn_left()
+                    turn_left()
+                    turn_left()
+                </pre
+          >
+
+          <h3><code>Function body must be indented…</code></h3>
+          <p>
+            All functions (like main) need to have a body, which is the indented
+            code. See Chapter 3 of the Karel Reader. If you don’t have any code
+            in the function body, that can lead to this error.
+          </p>
+
+          <h3><code>Found a new-line when expecting ":"</code></h3>
+          <p>
+            If you are defining a new function, or a for loop, you need to end
+            the header with a <code>:</code>.
+          </p>
+
+          <h3><code>Found "&lt;something&gt;" when expecting "("</code></h3>
+          <p>There are several issues that can cause this message.</p>
+          <ol>
+            <li>
+              Every command has open and closed parentheses after it. So for
+              example we write <code>move()</code>, not <code>move</code>.
+              Similarly, when you define a function, you also write open and
+              closed parentheses after the name. You will learn why we do this
+              in a few weeks!
+            </li>
+            <li>
+              <p>
+                This can happen if you try and declare a function inside another
+                function. In Karel, that is not allowed. Recall that there is a
+                difference between defining a new function and using one:
+              </p>
+            </li>
+          </ol>
+          <pre>
+                    def main():
+                    move()
+                    def illegal_nested_function():
+                    turn_left()
+                </pre
+          >
+
+          <h4><code>Found move when expecting def</code></h4>
+          <p>
+            In Karel, all commands must be declared inside a function! Do you
+            have a
+            <code>main</code> function?
+          </p>
+
+          <h2>Warmup</h2>
+          <p><i>Coming Soon!</i></p>
+
+          <h2>Shelter-in-place</h2>
+          <p><i>Coming Soon!</i></p>
+
+          <h2>Piles</h2>
+          <p><i>Coming Soon!</i></p>
+
+          <p>
+            <i>
+              Have a question which wasn’t covered here? Please email
+              <a href="mailto:codeinplace@cs.stanford.edu"
+                >codeinplace@cs.stanford.edu</a
+              >
+              We will do our best to answer your questions. Include your code
+              and any error messages shown.
+            </i>
+          </p>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+    <script>
+      $(function() {
+        var navSelector = "#toc";
+        var $myNav = $(navSelector);
+        Toc.init($myNav);
+        $("body").scrollspy({
+          target: navSelector
+        });
+      });
+    </script>
+  </body>
+</html>
