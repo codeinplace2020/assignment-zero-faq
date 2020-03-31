@@ -38,6 +38,20 @@
             </i>
           </p>
 
+          <h2>General</h2>
+          <p>
+            Have questions related to assignment 0 in general? Look for them here!
+          </p>
+        <div class="faq-section">
+          <div class="card question" >
+            <h3><code>"Learn Karel Basics" not marked complete</code></h3>
+            <p>
+              The step involving reading chapters 1-5 doesn't get marked as complete with a green tick like the other steps. Feel free to read at your own pace and move on from this step when you finish the chapters.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-section">
           <h2>Understanding Typos</h2>
           <p>
             Reading error messages for typos is a skill that is worth learning
@@ -45,35 +59,40 @@
             ones and what they could mean.
           </p>
 
-          <h3><code>Expected a body definition</code></h3>
-          <p>
-            All functions (like <code>main</code>) need to have a body, which is
-            the indented code. See Chapter 3 of the Karel Reader. For example,
-            in this <code>turn_right</code> function definition, the
-            <code>turn_left</code> commands are all in the body:
-          </p>
+          <div class="card question" >
+            <h3><code>Expected a body definition</code></h3>
+            <p>
+              All functions (like <code>main</code>) need to have a body, which is
+              the indented code. See Chapter 3 of the Karel Reader. For example,
+              in this <code>turn_right</code> function definition, the
+              <code>turn_left</code> commands are all in the body:
+            </p>
 
-          <pre>
-                    def turn_right():
-                    turn_left()
-                    turn_left()
-                    turn_left()
-                </pre
-          >
+            <pre>
+                      def turn_right():
+                          turn_left()
+                          turn_left()
+                          turn_left()</pre>
+        </div>
 
+        <div class="card question">
           <h3><code>Function body must be indented…</code></h3>
           <p>
             All functions (like main) need to have a body, which is the indented
             code. See Chapter 3 of the Karel Reader. If you don’t have any code
             in the function body, that can lead to this error.
           </p>
+        </div>
 
+        <div class="card question" >
           <h3><code>Found a new-line when expecting ":"</code></h3>
           <p>
             If you are defining a new function, or a for loop, you need to end
             the header with a <code>:</code>.
           </p>
+        </div>
 
+        <div class="card question" >
           <h3><code>Found "&lt;something&gt;" when expecting "("</code></h3>
           <p>There are several issues that can cause this message.</p>
           <ol>
@@ -94,28 +113,33 @@
           </ol>
           <pre>
                     def main():
-                    move()
-                    def illegal_nested_function():
-                    turn_left()
-                </pre
-          >
+                        move()
+                        def illegal_nested_function():
+                        turn_left()</pre>
+        </div>
 
-          <h4><code>Found move when expecting def</code></h4>
+        <div class="card question" >
+          <h3><code>Found move when expecting def</code></h3>
           <p>
             In Karel, all commands must be declared inside a function! Do you
             have a
             <code>main</code> function?
           </p>
+        </div>
+      </div>
 
+      <div class="faq-section">
           <h2>Warmup</h2>
           <p><i>Coming Soon!</i></p>
-
+      </div>
+      <div class="faq-section">
           <h2>Shelter-in-place</h2>
           <p><i>Coming Soon!</i></p>
-
+      </div>
+      <div class="faq-section">
           <h2>Piles</h2>
           <p><i>Coming Soon!</i></p>
-
+      </div>
           <p>
             <i>
               Have a question which wasn’t covered here? Please email
