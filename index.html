@@ -1,5 +1,5 @@
-<!DOCTYPE html lang="en">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta
@@ -17,6 +17,8 @@
     rel="stylesheet"
     href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css"
     />
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/default.min.css">
   <link rel="stylesheet" href="faqstyles.css" />
 </head>
 <body>
@@ -106,12 +108,16 @@
               example, in this <code>turn_right</code> function definition, the
               <code>turn_left</code> commands are all in the body:
             </p>
-            <pre>
-              def turn_right():
-                  turn_left()
-                  turn_left()
-                  turn_left()
-            </pre>
+            <div class="d-flex justify-content-center">
+              <pre>
+                <code class="language-python">
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+                </code>
+              </pre>
+            </div>
           </div>
           <div class="card question">
             <h3><code>Function body must be indented...</code></h3>
@@ -149,12 +155,16 @@
                 </p>
               </li>
             </ol>
-            <pre>
-              def main():
-                  move()
-                  def illegal_nested_function():
-                      turn_left()
-            </pre>
+            <div class="d-flex justify-content-center">
+              <pre>
+                <code class="language-python">
+def main():
+    move()
+    <mark class="highlight-inline">def illegal_nested_function():</mark>
+        turn_left()
+                </code>
+              </pre>
+            </div>
           </div>
           <div class="card question">
             <h3><code>Found move when expecting def</code></h3>
@@ -200,10 +210,14 @@
               best strategy to do so for this problem. Check out Chapter 5 for
               more information!
             </p>
-            <pre>
-              for i in range(11):
-                  #code
-            </pre>
+            <div class="d-flex justify-content-center">
+              <pre>
+                <code class="language-python">
+for i in range(11):
+    #code
+                </code>
+              </pre>
+            </div>
           </div>
         </div>
         <p>
@@ -237,7 +251,10 @@
   <script
     src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"
     ></script>
-  <script>
+  <script
+    src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"
+    ></script>
+  <script type="text/javascript">
     $(function() {
       var navSelector = "#toc";
       var $myNav = $(navSelector);
@@ -245,7 +262,17 @@
       $("body").scrollspy({
         target: navSelector
       });
+      // Trim whitespace around code blocks.
+      $("pre>code").each(function(index, element) {
+        var $elem = $(element);
+        $elem.html($.trim($elem.html()));
+      });
+      $("pre").each(function(index, element) {
+        var $elem = $(element);
+        $elem.html($.trim($elem.html()));
+      });
     });
+    hljs.initHighlightingOnLoad();
   </script>
 </body>
 </html>
